@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feel Touch Dance Studio - Расписание</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#E87917">
+    <style>
+        /* Стили для таблицы расписания */
+        .schedule {
+            margin-top: 30px;
+            overflow-x: auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 16px;
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #FF6B00;
+            color: white;
+            font-weight: bold;
+            position: sticky;
+            top: 0;
+        }
+        
+        tr:hover {
+            background-color: #ffb791;
+        }
+        
+        .beginner {
+            color: #2E7D32;
+            font-weight: bold;
+        }
+        
+        .intermediate {
+            color: #f96f25;
+            font-weight: bold;
+        }
+        
+        .advanced {
+            color: #C62828;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            table {
+                font-size: 14px;
+            }
+            
+            th, td {
+                padding: 10px 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Feel Touch Dance Studio</div>
+        <div class="slogan">Танцуй свою жизнь!</div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="../index.html">Главная</a></li>
+            <li><a href="styles.html">Направления</a></li>
+            <li><a href="teachers.html">Преподаватели</a></li>
+            <li><a href="shedule.html">Расписание</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+        </ul>
+    </nav>
+    
+    <section class="container">
+        <h2>Расписание занятий</h2>
+        <div class="schedule">
+            <table>
+                <thead>
+                    <tr>
+                        <th>День</th>
+                        <th>Время</th>
+                        <th>Направление</th>
+                        <th>Преподаватель</th>
+                        <th>Уровень</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Понедельник -->
+                    <tr>
+                        <td>Понедельник</td>
+                        <td>10:00 - 11:30</td>
+                        <td>Классический танец</td>
+                        <td>Ольга Берлиоз</td>
+                        <td class="beginner">Начинающий</td>
+                    </tr>
+                    <tr>
+                        <td>Понедельник</td>
+                        <td>16:00 - 17:30</td>
+                        <td>Джаз-модерн</td>
+                        <td>Александра Левина</td>
+                        <td class="intermediate">Средний</td>
+                    </tr>
+                    <tr>
+                        <td>Понедельник</td>
+                        <td>18:00 - 19:30</td>
+                        <td>Хип-хоп</td>
+                        <td>Александр Вернюк</td>
+                        <td class="beginner">Начинающий</td>
+                    </tr>
+                    <tr>
+                        <td>Понедельник</td>
+                        <td>20:00 - 21:30</td>
+                        <td>Брейк-данс</td>
+                        <td>Дмитрий Кутков</td>
+                        <td class="advanced">Продвинутый</td>
+                    </tr>
+                    
+                    <!-- Вторник -->
+                    <tr>
+                        <td>Вторник</td>
+                        <td>11:00 - 12:30</td>
+                        <td>Контемпорари</td>
+                        <td>Екатерина Романофф</td>
+                        <td class="beginner">Начинающий</td>
+                    </tr>
+                    <tr>
+                        <td>Вторник</td>
+                        <td>16:30 - 18:00</td>
+                        <td>Dancehall</td>
+                        <td>Маргарита Тимбет</td>
+                        <td class="intermediate">Средний</td>
+                    </tr>
+                    <tr>
+                        <td>Вторник</td>
+                        <td>18:30 - 20:00</td>
+                        <td>Vogue</td>
+                        <td>Татьяна Сернова</td>
+                        <td class="beginner">Начинающий</td>
+                    </tr>
+                    <tr>
+                        <td>Вторник</td>
+                        <td>20:30 - 22:00</td>
+                        <td>Хип-хоп</td>
+                        <td>Александр Вернюк</td>
+                        <td class="advanced">Продвинутый</td>
+                    </tr>
+                    
+                    <!-- Среда -->
+                    <tr>
+                        <td>Среда</td>
+                        <td>10:30 - 12:00</td>
+                        <td>Джаз-модерн</td>
+                        <td>Александра Левина</td>
+                        <td class="beginner">Начинающий</td>
+                    </tr>
+                    <tr>
+                        <td>Среда</td>
+                        <td>16:00 - 17:30</td>
+                        <td>Брейк-данс</td>
+                        <td>Дмитрий Кутков</td>
+                        <td class="intermediate">Средний</td>
+                    </tr>
+                    <tr>
+                        <td>Среда</td>
+                        <td>18:00 - 19:30</td>
+                        <td>Классический танец</td>
+                        <td>Ольга Берлиоз</td>
+                        <td class="advanced">Продвинутый</td>
+                    </tr>
+                    <tr>
+                        <td>Среда</td>
+                        <td>20:00 - 21:30</td>
+                        <td>Контемпорари</td>
+                        <td>Екатерина Романофф</td>
+                        <td class="intermediate">Средний</td>
+                    </tr>
+                    
+                    <!-- Четверг -->
+                    <tr>
+                        <td>Четверг</td>
+                        <td>11:00 - 12:30</td>
+                        <td>Vogue</td>
+                        <td>Татьяна Сернова</td>
+                        <td class="intermediate">Средний</td>
+                    </tr>
+                    <tr>
+                        <td>Четверг</td>
+                        <td>16:30 - 18:00</td>
+                        <td>Dancehall</td>
+                        <td>Маргарита Тимбет</td>
+                        <td class="advanced">Продвинутый</td>
+                    </tr>
+                    <tr>
+                        <td>Четверг</td>
+                        <td>18:30 - 20:00</td>
+                        <td>Хип-хоп</td>
+                        <td>Александр Вернюк</td>
+                        <td class="intermediate">Средний</td>
+                    </tr>
+                    <tr>
+                        <td>Четверг</td>
+                        <td>20:30 - 22:00</td>
+                        <td>Брейк-данс</td>
+                        <td>Дмитрий Кутков</td>
+                        <td class="beginner">Начинающий</td>
+                    </tr>
+                    
+                    <!-- Пятница -->
+                    <tr>
+                        <td>Пятница</td>
+                        <td>10:00 - 11:30</td>
+                        <td>Классический танец</td>
+                        <td>Ольга Берлиоз</td>
+                        <td class="intermediate">Средний</td>
+                    </tr>
+                    <tr>
+                        <td>Пятница</td>
+                        <td>16:00 - 17:30</td>
+                        <td>Контемпорари</td>
+                        <td>Екатерина Романофф</td>
+                        <td class="advanced">Продвинутый</td>
+                    </tr>
+                    <tr>
+                        <td>Пятница</td>
+                        <td>18:00 - 19:30</td>
+                        <td>Джаз-модерн</td>
+                        <td>Александра Левина</td>
+                        <td class="advanced">Продвинутый</td>
+                    </tr>
+                    <tr>
+                        <td>Пятница</td>
+                        <td>20:00 - 21:30</td>
+                        <td>Dancehall</td>
+                        <td>Маргарита Тимбет</td>
+                        <td class="beginner">Начинающий</td>
+                    </tr>
+                    
+                    <!-- Суббота -->
+                    <tr>
+                        <td>Суббота</td>
+                        <td>11:00 - 12:30</td>
+                        <td>Хип-хоп (дети)</td>
+                        <td>Александр Вернюк</td>
+                        <td class="beginner">Начинающий</td>
+                    </tr>
+                    <tr>
+                        <td>Суббота</td>
+                        <td>13:00 - 14:30</td>
+                        <td>Брейк-данс (дети)</td>
+                        <td>Дмитрий Кутков</td>
+                        <td class="beginner">Начинающий</td>
+                    </tr>
+                    <tr>
+                        <td>Суббота</td>
+                        <td>15:00 - 16:30</td>
+                        <td>Vogue</td>
+                        <td>Татьяна Сернова</td>
+                        <td class="advanced">Продвинутый</td>
+                    </tr>
+                    <tr>
+                        <td>Суббота</td>
+                        <td>17:00 - 18:30</td>
+                        <td>Мастер-класс</td>
+                        <td>Все преподаватели</td>
+                        <td class="intermediate">Смешанный</td>
+                    </tr>
+                    
+                    <!-- Воскресенье -->
+                    <tr>
+                        <td>Воскресенье</td>
+                        <td>11:00 - 12:30</td>
+                        <td>Классический танец (дети)</td>
+                        <td>Ольга Берлиоз</td>
+                        <td class="beginner">Начинающий</td>
+                    </tr>
+                    <tr>
+                        <td>Воскресенье</td>
+                        <td>13:00 - 14:30</td>
+                        <td>Контемпорари</td>
+                        <td>Екатерина Романофф</td>
+                        <td class="intermediate">Средний</td>
+                    </tr>
+                    <tr>
+                        <td>Воскресенье</td>
+                        <td>15:00 - 17:00</td>
+                        <td>Открытый урок</td>
+                        <td>Все преподаватели</td>
+                        <td class="beginner">Для всех</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-overlay">
+            <div class="footer-text-container">
+                <p>© 2025 Feel Touch Dance Studio.</p>
+            </div>
+        </div>
+    </footer>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('serviceworker.js')
+      .then(() => console.log('Service Worker зарегистрирован'));
+  }
+</script>
+</body>
+</html>

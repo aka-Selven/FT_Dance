@@ -1,0 +1,455 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: url("body.jpg") repeat;
+    background-size: cover;
+    color: #ffffff;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Шапка */
+header {
+    background: url("header.jpg");
+    background-size: cover;
+    color: #FFF9F0; 
+    height: 350px;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: relative;
+}
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 0;
+}
+header > * {
+    position: relative;
+    z-index: 1;
+}
+
+header > div {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.logo {
+    font-size: 2.5rem;
+    background-color: rgba(232, 121, 23, 0.8); 
+    width: 30%;
+    margin: 0 auto;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #FFF9F0; 
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.slogan {
+    background-color: rgba(232, 121, 23, 0.8); 
+    margin: 0 auto;
+    font-style: italic;
+    margin-bottom: 1rem;
+    color: #FFF9F0; 
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Навигация */
+nav {
+    background-color: #E87917; 
+    padding: 0.5rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #FFF9F0; 
+    font-style: italic;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #D45D00;
+    transform: translateY(-2px);
+}
+
+/* Стили для активной категории */
+nav ul li a.active {
+    background-color: #FFA54F; 
+    color: #333;
+}
+
+/* Герой-секция */
+.hero {
+    background: url("baller.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 62vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #FFF9F0; 
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6); 
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Кнопки */
+.btn {
+    display: inline-block;
+    background-color: #E87917; 
+    color: #35250d; 
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.btn:hover {
+    background-color: #D45D00; 
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Основной контейнер */
+.container {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Секции */
+section {
+    padding: 3rem 0;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    color: #ffffff;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: #050300;
+}
+
+/* Карточки направлений */
+.dance-styles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.style-card {
+    background-color: #000000; 
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+    border: 1px solid #E87917; 
+}
+
+.style-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(232, 121, 23, 0.2);
+}
+
+.style-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid #ff6f00; 
+}
+
+.style-card-content {
+    padding: 1.5rem;
+}
+
+.style-card h3 {
+    margin-bottom: 0.5rem;
+    color: #E87917; 
+    font-size: 1.4rem;
+}
+
+/* Карточки преподавателей */
+.teachers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.teacher-card {
+    background-color: #000000; 
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: all 0.3s;
+    border: 1px solid #E87917; 
+}
+
+.teacher-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(232, 121, 23, 0.2);
+}
+
+.teacher-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 3px solid #E87917; 
+}
+
+.teacher-info {
+    padding: 1.5rem;
+}
+
+.teacher-info h3 {
+    color: #E87917; 
+    margin-bottom: 0.5rem;
+}
+
+/* Расписание */
+.schedule {
+    background-color: #000000; 
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border: 1px solid #E87917; 
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #E87917; 
+}
+
+th {
+    background-color: rgba(232, 121, 23, 0.1); 
+    color: #E87917; 
+    font-weight: bold;
+}
+
+/* Контакты */
+.social-card {
+    background-color: #000000;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 3px 10px rgba(232, 121, 23, 0.2);;
+    border: 1px solid #E87917;
+    text-align: center;
+}
+
+.social-card h3 {
+    margin-bottom: 1rem;
+    color: #ffffff;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.social-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background-color: #ffffff;
+}
+
+.social-handle {
+    color: #FF6B00;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    display: block;
+    font-style: italic;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.15);
+    filter: drop-shadow(0 2px 8px rgba(232, 121, 23, 0.6));
+}
+
+/* Подвал */
+footer {
+    background: url("podval.jpg") no-repeat center center;
+    background-size: cover;
+    position: relative;
+    padding: 8rem 0;
+}
+
+.footer-overlay {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.footer-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 0;
+}
+
+.footer-text-container {
+    position: relative;
+    z-index: 1;
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 3px;
+    background-color: rgba(232, 121, 23, 0.7); 
+    border: 0.5px solid #ff6200; 
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.footer-text-container p {
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .quick-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .dance-styles, .teachers, .contact-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero {
+        height: 50vh;
+    }
+    
+    .logo, .slogan {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 2rem;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    .container {
+        padding: 1rem;
+    }
+    
+    section {
+        padding: 2rem 0;
+    }
+    
+    .logo, .slogan {
+        width: 90%;
+    }
+}
