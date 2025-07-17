@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feel Touch Dance Studio - Направления</title>
     <link rel="stylesheet" href="../styles.css">
-    <link rel="manifest" href="/FT_Dance/manifest.json">
+    <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#E87917">
     <style>
         .container {
@@ -199,23 +199,10 @@
             </div>
         </div>
     </footer>
-    <script>
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/FT_Dance/sw.js')
-            .then(registration => {
-                console.log('SW registered:', registration);
-                
-                // Проверка обновлений каждые 60 минут
-                setInterval(() => {
-                registration.update();
-                }, 60 * 60 * 1000);
-            })
-            .catch(error => {
-                console.log('SW registration failed:', error);
-            });
-        });
-    }
-    </script>
+<script>
+  if ('sw' in navigator) {
+    navigator.serviceWorker.register('sw.js');
+  }
+</script>
 </body>
 </html>
