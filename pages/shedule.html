@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feel Touch Dance Studio - Расписание</title>
     <link rel="stylesheet" href="../styles.css">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#000000">
+    <link rel="manifest" href="/FT_Dance/manifest.json">
+    <meta name="theme-color" content="#E87917">
     <style>
         /* Стили для таблицы расписания */
         .schedule {
@@ -39,7 +39,6 @@
             background-color: #ffb791;
         }
         
-        /* Цвета для уровней */
         .beginner {
             color: #2E7D32;
             font-weight: bold;
@@ -55,7 +54,6 @@
             font-weight: bold;
         }
         
-        /* Адаптивность */
         @media (max-width: 768px) {
             table {
                 font-size: 14px;
@@ -312,13 +310,22 @@
         </div>
     </footer>
     <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js')
-                    .then(reg => console.log('SW registered:', reg))
-                    .catch(err => console.log('SW registration failed:', err));
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/FT_Dance/sw.js')
+            .then(registration => {
+                console.log('SW registered:', registration);
+                
+                // Проверка обновлений каждые 60 минут
+                setInterval(() => {
+                registration.update();
+                }, 60 * 60 * 1000);
+            })
+            .catch(error => {
+                console.log('SW registration failed:', error);
             });
-        }
+        });
+    }
     </script>
 </body>
 </html>
