@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feel Touch Dance Studio - Главная</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#000000">
+</head>
+<body>
+    <header>
+        <div class="logo">Feel Touch Dance Studio</div>
+        <div class="slogan">Танцуй свою жизнь!</div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="pages/styles.html">Направления</a></li>
+            <li><a href="pages/teachers.html">Преподаватели</a></li>
+            <li><a href="pages/shedule.html">Расписание</a></li>
+            <li><a href="pages/contact.html">Контакты</a></li>
+        </ul>
+    </nav>
+    
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Открой в себе танцора</h1>
+            <p>Профессиональные преподаватели, дружеская атмосфера и любовь к танцу ждут вас в нашей студии</p>
+            <a href="pages/registration.html" class="btn">Записаться на занятие</a>
+        </div>
+    </section>
+    
+    <section class="container">
+        <h2>Добро пожаловать в нашу студию!</h2>
+        <p>Мы предлагаем профессиональное обучение танцам для всех возрастов и уровней подготовки.</p>
+    </section>
+    
+    <footer>
+        <div class="footer-overlay">
+            <div class="footer-text-container">
+                <p>© 2025 Feel Touch Dance Studio.</p>
+            </div>
+        </div>
+    </footer>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then(reg => console.log('SW registered:', reg))
+      .catch(err => console.log('SW registration failed:', err));
+  });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rhythm Dance Studio - Запись на занятие</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#000000">
+    <style>
+        .registration-form { max-width: 600px; margin: 30px auto; padding: 20px; background: #000000; border-radius: 10px; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+        .form-group input, .form-group select, .form-group textarea { 
+            width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; 
+        }
+        .submit-btn { 
+            background: #ff6d12f5; color: rgb(0, 0, 0); border: none; padding: 12px 20px; 
+            border-radius: 5px; cursor: pointer; font-size: 16px; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Feel Touch Dance Studio</div>
+        <div class="slogan">Танцуй свою жизнь!</div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="../index.html">Главная</a></li>
+            <li><a href="styles.html">Направления</a></li>
+            <li><a href="teachers.html">Преподаватели</a></li>
+            <li><a href="schedule.html">Расписание</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+        </ul>
+    </nav>
+    
+    <section class="container">
+        <h2>Запись на занятие</h2>
+        <p>Заполните форму, и мы свяжемся с вами для подтверждения записи.</p>
+        <form class="registration-form" action="requests.php" method="POST">
+            <div class="form-group">
+                <label for="name">ФИО*</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Телефон*</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+            </div>
+            
+            <div class="form-group">
+                <label for="style">Направление*</label>
+                <select id="style" name="style" required>
+                    <option value="" disabled selected>Выберите стиль</option>
+                    <option value="hiphop">Hip-Hop</option>
+                    <option value="contemporary">Contemporary</option>
+                    <option value="ballet">Балет</option>
+                    <option value="latin">Латина</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="level">Уровень подготовки*</label>
+                <select id="level" name="level" required>
+                    <option value="" disabled selected>Выберите уровень</option>
+                    <option value="beginner">Начинающий</option>
+                    <option value="intermediate">Средний</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="date">Желаемая дата занятия*</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Дополнительные пожелания</label>
+                <textarea id="message" name="message"></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Отправить заявку</button>
+        </form>
+    </section>
+    
+    <footer>
+        <div class="footer-overlay">
+            <div class="footer-text-container">
+                <p>© 2025 Feel Touch Dance Studio.</p>
+            </div>
+        </div>
+    </footer>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then(reg => console.log('SW registered:', reg))
+      .catch(err => console.log('SW registration failed:', err));
+  });
+}
+</script>
+</body>
+</html>
